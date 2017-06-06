@@ -22,8 +22,21 @@ def compareWords(firstWord, secondWord):
         return swapsCount * 5
 
 def countSwaps(firstWord, secondWord):
-    return 0
 
+    swaps = 0
 
-print(compareWords("ba", "ab"))
+    for x in xrange(len(secondWord)):
+        if firstWord[x] != secondWord[x]:
+            swaps =+ 1
 
+    return swaps
+
+print(compareWords("ABCDEF", "ABCDEF"))
+print(compareWords("ABDCEF", "BBCDEF"))
+print(compareWords("BBDCEF", "BBCDEF"))
+print(compareWords("HARRIS", "HARIRS"))
+print(compareWords("BACDFE", "ABCDEF"))
+print(compareWords("ABCFDE", "ABCDEF"))
+print(compareWords("ANNE", "ENNA"))
+print(compareWords("FEDCBA", "ABCDEF"))
+print(compareWords("GFEDCBA", "ABCDEFG"))
