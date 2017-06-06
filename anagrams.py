@@ -22,8 +22,8 @@ def compareWords(firstWord, secondWord):
         return swapsCount * 5
 
 def countSwaps(firstWord, secondWord):
-    pass
+    return 0
 
 
-print(compareWords("aa", "ab"))
+print(compareWords("ba", "ab"))
 
