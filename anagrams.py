@@ -1,3 +1,5 @@
+import sys
+
 def compareWords(firstWord, secondWord):
     if firstWord == secondWord:
         return 100
@@ -52,15 +54,23 @@ def countSwaps(firstword, secondword):
 
     return swapcount
 
-print("Actual score:  {} \nExpected score 100".format(compareWords("ABCDEF", "ABCDEF")))
-print("Actual score:  {} \nExpected score 0".format(compareWords("ABDCEF", "BBCDEF")))
-print("Actual score:  {} \nExpected score 95".format(compareWords("BBDCEF", "BBCDEF")))
-print("Actual score:  {} \nExpected score 95".format(compareWords("HARRIS", "HARIRS")))
-print("Actual score:  {} \nExpected score 95".format(compareWords("HARRIS", "HRARIS")))
 
-print("Actual score:  {} \nExpected score 90".format(compareWords("BACDFE", "ABCDEF")))
-print("Actual score:  {} \nExpected score 90".format(compareWords("ABCFDE", "ABCDEF")))
+words = input("Enter two comma separated words to check if they are anagrams: ")
+firstword,secondword = words.split(',')
+#secondword = words.split(',')[1]
 
-print("Actual score:  {} \nExpected score 75".format(compareWords("ANNE", "ENNA")))
-print("Actual score:  {} \nExpected score 25".format(compareWords("FEDCBA", "ABCDEF")))
-print("Actual score:  {} \nExpected score 0".format(compareWords("GFEDCBA", "ABCDEFG")))
+print("Score of {} when comparing {} with {}".format(compareWords(firstword,secondword),firstword,secondword))
+
+
+# print("Actual score:  {} \nExpected score 100".format(compareWords("ABCDEF", "ABCDEF")))
+# print("Actual score:  {} \nExpected score 0".format(compareWords("ABDCEF", "BBCDEF")))
+# print("Actual score:  {} \nExpected score 95".format(compareWords("BBDCEF", "BBCDEF")))
+# print("Actual score:  {} \nExpected score 95".format(compareWords("HARRIS", "HARIRS")))
+# print("Actual score:  {} \nExpected score 95".format(compareWords("HARRIS", "HRARIS")))
+#
+# print("Actual score:  {} \nExpected score 90".format(compareWords("BACDFE", "ABCDEF")))
+# print("Actual score:  {} \nExpected score 90".format(compareWords("ABCFDE", "ABCDEF")))
+#
+# print("Actual score:  {} \nExpected score 75".format(compareWords("ANNE", "ENNA")))
+# print("Actual score:  {} \nExpected score 25".format(compareWords("FEDCBA", "ABCDEF")))
+# print("Actual score:  {} \nExpected score 0".format(compareWords("GFEDCBA", "ABCDEFG")))
