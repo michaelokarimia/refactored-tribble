@@ -1,8 +1,8 @@
-#Anagrams
+# Anagrams
 
 Requires python3
 
-##Usage
+## Usage
 
 From your command line, run `python3 anagrams.py`
 
